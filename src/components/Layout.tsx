@@ -97,8 +97,12 @@ const Layout: React.FC<LayoutProps> = ({ children, currentPage, onPageChange }) 
               ))}
             </nav>
 
-            <button className="hidden md:inline-flex bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-2 rounded-lg font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-200 transform hover:scale-105">
-              <span onClick={() => onPageChange('contact')}>Devis Gratuit</span>
+            <button
+              type="button"
+              onClick={() => onPageChange('contact')}
+              className="hidden md:inline-flex bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-2 rounded-lg font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-200 transform hover:scale-105"
+            >
+              Devis Gratuit
             </button>
 
             {/* Mobile social icons and menu button */}

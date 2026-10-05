@@ -94,12 +94,19 @@ const HomePage: React.FC = () => {
               Devis gratuit sous 24h.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-red-700 hover:to-red-800 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2">
+              <a
+                href="tel:0621006333"
+                className="bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-red-700 hover:to-red-800 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2"
+              >
                 <Phone className="h-5 w-5" />
                 <span>06 21 00 63 33</span>
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-200 flex items-center justify-center space-x-2">
-                <span onClick={() => window.dispatchEvent(new CustomEvent('navigate', { detail: 'contact' }))}>Devis Gratuit</span>
+              </a>
+              <button
+                type="button"
+                onClick={() => window.dispatchEvent(new CustomEvent('navigate', { detail: 'contact' }))}
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-200 flex items-center justify-center space-x-2"
+              >
+                <span>Devis Gratuit</span>
                 <ArrowRight className="h-5 w-5" />
               </button>
             </div>
@@ -267,11 +274,15 @@ const HomePage: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">Prêt à Améliorer Votre Confort ?</h2>
           <p className="text-xl mb-8 text-red-100">Contactez-nous dès maintenant pour un devis gratuit et personnalisé</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
+            <a
+              href="tel:0621006333"
+              className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
+            >
               <Phone className="h-5 w-5" />
-              <a href="tel:0621006333">06 21 00 63 33</a>
-            </button>
+              <span>06 21 00 63 33</span>
+            </a>
             <button 
+              type="button"
               onClick={() => window.dispatchEvent(new CustomEvent('navigate', { detail: 'contact' }))}
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-red-600 transition-all duration-200"
             >
