@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Blog content styling */
+.blog-content h3 {
+  @apply text-2xl font-bold text-gray-900 mb-4 mt-8;
+}
+
+.blog-content h4 {
+  @apply text-xl font-semibold mb-3 mt-6;
+}
+
+.blog-content p {
+  @apply text-gray-700 leading-relaxed mb-4;
+}
+
+.blog-content ul {
+  @apply space-y-2 mb-6;
+}
+
+.blog-content li {
+  @apply text-gray-700;
+}
+
+.blog-content .bg-gradient-to-r {
+  @apply shadow-lg;
+}
