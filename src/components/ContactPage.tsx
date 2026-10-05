@@ -299,26 +299,26 @@ const ContactPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Notre Zone d'Intervention</h2>
-            <p className="text-lg sm:text-xl text-gray-600">Basés à Draveil, nous intervenons dans toute l'Île-de-France</p>
+            <p className="text-lg sm:text-xl text-gray-600">Nous intervenons dans toute l'Île-de-France</p>
           </div>
 
           <div className="bg-white rounded-xl shadow-lg overflow-hidden">
             <div className="h-96 relative">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2632.8!2d2.4144!3d48.6844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5d9b9b9b9b9b9%3A0x9b9b9b9b9b9b9b9b!2sDraveil%2C%20France!5e0!3m2!1sfr!2sfr!4v1642000000000!5m2!1sfr!2sfr"
+                src="https://maps.google.com/maps?q=%C3%8Ele-de-France&z=9&hl=fr&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Localisation Climatec - Draveil"
+                title="Zone d'intervention Climatec - Île-de-France"
               ></iframe>
             </div>
             <div className="p-6 bg-red-50">
               <div className="flex items-center justify-center space-x-2 text-red-700">
                 <MapPin className="h-5 w-5" />
-                <span className="font-semibold">Climatec - Draveil (91210)</span>
+                <span className="font-semibold">Climatec - Île-de-France</span>
               </div>
               <p className="text-center text-gray-600 mt-2 text-sm">
                 Zone d'intervention : Paris • Seine-et-Marne • Yvelines • Essonne • Hauts-de-Seine • Seine-Saint-Denis • Val-de-Marne • Val-d'Oise
