@@ -20,23 +20,15 @@ const ContactPage: React.FC = () => {
     setError('');
 
     try {
-      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-      const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-
-      const response = await fetch(
-        `${supabaseUrl}/functions/v1/send-contact-email`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${supabaseKey}`,
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
 
       if (!response.ok) {
-        throw new Error('Failed to send message');
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error || "Impossible d'envoyer le message");
       }
 
       setIsSubmitted(true);

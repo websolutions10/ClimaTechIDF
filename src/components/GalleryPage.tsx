@@ -20,6 +20,9 @@ const GalleryPage: React.FC = () => {
       location: 'Draveil (91)',
       description: 'Installation de 3 unités split murales dans une villa de 120m²',
       image: '/images/gallery/villa-draveil.jpg',
+      // La clim est en haut de la photo (portrait) : on cadre dessus
+      objectPosition: '50% 27%',
+      lightboxFit: 'contain',
       details: 'Système multi-split Daikin avec 3 unités intérieures. Installation soignée avec passage des liaisons frigorifiques en goulotte.'
     },
     {
@@ -135,7 +138,8 @@ const GalleryPage: React.FC = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                    style={{ objectPosition: project.objectPosition ?? 'center' }}
+                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -188,7 +192,12 @@ const GalleryPage: React.FC = () => {
               <img
                 src={filteredProjects[selectedImage].image}
                 alt={filteredProjects[selectedImage].title}
-                className="w-full h-96 object-cover"
+                style={{ objectPosition: filteredProjects[selectedImage].objectPosition ?? 'center' }}
+                className={`w-full h-[60vh] max-h-[600px] ${
+                  filteredProjects[selectedImage].lightboxFit === 'contain'
+                    ? 'object-contain bg-gray-100'
+                    : 'object-cover'
+                }`}
               />
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">

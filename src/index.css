@@ -26,3 +26,10 @@
 .blog-content .bg-gradient-to-r {
   @apply shadow-lg;
 }
+
+/* Masque toute pastille « Made with Bolt » */
+a[href*="bolt.new"],
+#bolt-badge,
+.bolt-badge {
+  display: none !important;
+}
